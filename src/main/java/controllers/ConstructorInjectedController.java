@@ -1,7 +1,9 @@
 package controllers;
 
+import org.springframework.stereotype.Controller;
 import services.GreetingService;
 
+@Controller
 public class ConstructorInjectedController {
 
     private  final GreetingService greetingService;
@@ -10,7 +12,14 @@ public class ConstructorInjectedController {
         this.greetingService = greetingService;
     }
 
-    public String getGreetingService() {
-        return greetingService.sayGreeting();
+    //public String getGreetingService() {
+        //return greetingService.sayGreeting();
+    //}
+
+
+    //trial
+    public String getGreeting(){
+       return greetingService.sayGreeting();
     }
+
 }
