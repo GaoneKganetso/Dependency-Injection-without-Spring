@@ -17,13 +17,17 @@ public class SfgDiApplication {
 
 		MyController myController = (MyController) ctx.getBean("myController");
 
-		String greeting = myController.sayHello();
+		// String greeting =controller2.sayHello();
+		//System.out.println(greeting);
 
-		System.out.println(greeting);
+		System.out.println("    ----Primary Bean");
+		System.out.println(myController.sayHello());
+
 
 		/**
 		 * gives error if you do not annotate the property injected controller class
 		 */
+
 		System.out.println("  ---PROPERTY    ");
 		PropertyInjectedController propertyInjectedController = (PropertyInjectedController)  ctx.getBean("propertyInjectedController");
 		System.out.println(propertyInjectedController.getGreeting());

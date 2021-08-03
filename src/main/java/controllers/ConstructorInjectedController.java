@@ -16,7 +16,6 @@ public class ConstructorInjectedController {
         //return greetingService.sayGreeting();
     //}
 
-
     //trial
     public String getGreeting(){
        return greetingService.sayGreeting();
