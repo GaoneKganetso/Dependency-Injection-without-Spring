@@ -1,9 +1,6 @@
 package guruspringframework.sfgdi;
 
-import controllers.ConstructorInjectedController;
-import controllers.MyController;
-import controllers.PropertyInjectedController;
-import controllers.SetterInjectionController;
+import controllers.*;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -14,6 +11,10 @@ public class SfgDiApplication {
 	public static void main(String[] args)
 	{
 		ApplicationContext ctx = SpringApplication.run(SfgDiApplication.class, args);
+
+		ProfileController profileController = (ProfileController)  ctx.getBean("profileController");
+		System.out.println(profileController.sayHello());
+
 
 		MyController myController = (MyController) ctx.getBean("myController");
 
